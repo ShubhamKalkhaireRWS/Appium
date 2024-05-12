@@ -12,7 +12,8 @@ jobs:
       - name: Install
         run: npm install
       - name: Test
-        env: BROWSERSTACK_USER: ${{secrets.BS_USER}}
+        env:
+          BROWSERSTACK_USER: ${{secrets.BS_USER}}
           BROWSERSTACK_KEY: ${{secrets.BS_KEY}}
         run: npx wdio wdio.android.conf.js --spec ./test/specs/Android/addNote.specs.js
       - uses: actions/upload-artifact@v1
