@@ -1,9 +1,9 @@
-const { config } = require("./wdio.shared.conf");
-const path = require("path");
+const { config } = require("./wdio.shared.conf")
+const path = require("path")
 
-config.port = 4723;
+config.port = 4723
 
-config.specs = ["./test/specs/ios/test.specs.js"];
+config.specs = ["./test/specs/ios/test.specs.js"]
 
 config.capabilities = [
   {
@@ -15,7 +15,17 @@ config.capabilities = [
     "appium:app": path.join(process.cwd(), "App/ios/MVCTodo.app"),
     "appium:autoGrantPermissions": true,
   },
-];
+]
 
-config.services = ["appium"];
-exports.config = config;
+config.services = [
+  ["appium"],
+  {
+    args: {
+      address: "localhost",
+      port: 4723,
+      relaxedSecurity: true,
+    },
+    logPath: "./",
+  },
+]
+exports.config = config
