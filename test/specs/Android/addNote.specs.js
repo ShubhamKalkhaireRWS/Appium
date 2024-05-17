@@ -29,7 +29,7 @@ describe(`Add Notes ${browser.capabilities.deviceName}`, () => {
     await $(`//*[@text='OK']`).click()
     await $(`//*[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/icon_nav']`).click()
     await $(`//*[@text='Trash Can']`).click()
-    await driver.getPageSource()
+    // await driver.getPageSource()
     expect($(`//*[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/title']`).getText()).toHaveText(note)
   })
 })
