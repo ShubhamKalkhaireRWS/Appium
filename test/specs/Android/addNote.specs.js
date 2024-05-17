@@ -1,4 +1,4 @@
-import allureReporter from "@wdio/allure-reporter"
+const allureReporter = require("@wdio/allure-reporter")
 
 describe(`Add Notes ${browser.capabilities.deviceName}`, () => {
   it("Skip Tutorial", async () => {
