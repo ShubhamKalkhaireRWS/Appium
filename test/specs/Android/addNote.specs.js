@@ -20,7 +20,7 @@ describe(`Add Notes ${browser.capabilities.deviceName}`, () => {
   })
 
   it("Delete Note", async () => {
-    // await driver.back()
+    await driver.back()
 
     const note = await $(`//*[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/title']`).getText()
     await $(`//*[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/title']`).click()
