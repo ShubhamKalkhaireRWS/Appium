@@ -1,4 +1,6 @@
-describe("Add Notes", () => {
+import allureReporter from "@wdio/allure-reporter"
+
+describe(`Add Notes ${browser.capabilities.deviceName}`, () => {
   it("Skip Tutorial", async () => {
     await $(`//*[@text='SKIP']`).click()
 
